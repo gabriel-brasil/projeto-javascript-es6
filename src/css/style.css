@@ -100,6 +100,12 @@ body {
   grid-column: 2;
 }
 
+
+.animais-lista li {
+  cursor: pointer;
+}
+
+
 .animais-lista::-webkit-scrollbar {
   width: 18px;
 }
@@ -185,6 +191,16 @@ body {
   padding: 20px;
   font-family: 'IMB Plex Mono', monospace;
   font-weight: bold;
+}
+
+
+.activeJS .js-tab-content section {
+  display: none;
+}
+
+.js-tab-content section.ativo {
+  display: block !important;
+  animation: show .5s forwards;
 }
 
 @media (max-width: 700px) {
