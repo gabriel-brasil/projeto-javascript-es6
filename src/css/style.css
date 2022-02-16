@@ -42,7 +42,6 @@ body {
   grid-column: 1 / 4;
 }
 
-
 /* Header */
 .menu {
   grid-column: 3 / 5;
@@ -52,7 +51,7 @@ body {
 }
 
 .menu ul {
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   padding: 10px;
 }
@@ -65,8 +64,8 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: .875rem;
-  letter-spacing: .1em;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
 }
 
 /* Animais Fantásticos */
@@ -74,13 +73,13 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   margin-bottom: 1rem;
   color: #e54;
 }
 
 .animais h2::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 40px;
   height: 10px;
@@ -100,11 +99,9 @@ body {
   grid-column: 2;
 }
 
-
 .animais-lista li {
   cursor: pointer;
 }
-
 
 .animais-lista::-webkit-scrollbar {
   width: 18px;
@@ -137,12 +134,12 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   color: #e54;
 }
 
 .faq-lista dt::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 20px;
   height: 10px;
@@ -153,8 +150,26 @@ body {
 .faq-lista dd {
   font-family: Helvetica, Arial;
   line-height: 1.2;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   margin-left: 30px;
+}
+
+.activeJS .js-accordion dd {
+  display: none;
+}
+
+.js-accordion dd.ativo {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+.js-accordion dt::after {
+  content: '⬎';
+  margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after {
+  content: '⬏';
 }
 
 /* Contato */
@@ -172,7 +187,7 @@ body {
 }
 
 .dados li::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 20px;
   height: 10px;
@@ -193,14 +208,13 @@ body {
   font-weight: bold;
 }
 
-
 .activeJS .js-tab-content section {
   display: none;
 }
 
 .js-tab-content section.ativo {
   display: block !important;
-  animation: show .5s forwards;
+  animation: show 0.5s forwards;
 }
 
 @media (max-width: 700px) {
@@ -208,7 +222,9 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .menu, .grid-section, .copy {
+  .menu,
+  .grid-section,
+  .copy {
     grid-column: 1;
   }
 
@@ -232,7 +248,9 @@ body {
   }
 
   /* FAQ */
-  .faq-lista, .dados, .mapa {
+  .faq-lista,
+  .dados,
+  .mapa {
     grid-column: 1 / 3;
   }
 
